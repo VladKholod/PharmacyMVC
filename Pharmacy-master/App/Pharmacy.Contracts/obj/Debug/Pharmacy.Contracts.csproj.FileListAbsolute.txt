@@ -1,0 +1,17 @@
+D:\Course.Net\Workbench\Pharmacy\App\Pharmacy.Contracts\bin\Debug\Pharmacy.Contracts.dll
+D:\Course.Net\Workbench\Pharmacy\App\Pharmacy.Contracts\bin\Debug\Pharmacy.Contracts.pdb
+D:\Course.Net\Workbench\Pharmacy\App\Pharmacy.Contracts\obj\Debug\Pharmacy.Contracts.csprojResolveAssemblyReference.cache
+D:\Course.Net\Workbench\Pharmacy\App\Pharmacy.Contracts\obj\Debug\Pharmacy.Contracts.dll
+D:\Course.Net\Workbench\Pharmacy\App\Pharmacy.Contracts\obj\Debug\Pharmacy.Contracts.pdb
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.Contracts\bin\Debug\Pharmacy.Contracts.dll
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.Contracts\bin\Debug\Pharmacy.Contracts.pdb
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.Contracts\obj\Debug\Pharmacy.Contracts.csprojResolveAssemblyReference.cache
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.Contracts\obj\Debug\Pharmacy.Contracts.dll
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.Contracts\obj\Debug\Pharmacy.Contracts.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.Contracts\bin\Debug\Pharmacy.Contracts.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.Contracts\bin\Debug\Pharmacy.Contracts.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.Contracts\obj\Debug\Pharmacy.Contracts.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.Contracts\obj\Debug\Pharmacy.Contracts.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.Contracts\obj\Debug\Pharmacy.Contracts.csprojResolveAssemblyReference.cache
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.Contracts\bin\Debug\Pharmacy.Core.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.Contracts\bin\Debug\Pharmacy.Core.pdb

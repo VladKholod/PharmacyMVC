@@ -1,0 +1,30 @@
+D:\Course.Net\Workbench\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.BusinessLogic.dll
+D:\Course.Net\Workbench\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.BusinessLogic.pdb
+D:\Course.Net\Workbench\Pharmacy\App\Pharmacy.BusinessLogic\obj\Debug\Pharmacy.BusinessLogic.dll
+D:\Course.Net\Workbench\Pharmacy\App\Pharmacy.BusinessLogic\obj\Debug\Pharmacy.BusinessLogic.pdb
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.BusinessLogic.dll
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.BusinessLogic.pdb
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.BusinessLogic\obj\Debug\Pharmacy.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.BusinessLogic\obj\Debug\Pharmacy.BusinessLogic.dll
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.BusinessLogic\obj\Debug\Pharmacy.BusinessLogic.pdb
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Contracts.dll
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Core.dll
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Data.dll
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\EntityFramework.dll
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Contracts.pdb
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Core.pdb
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Data.pdb
+D:\Workspace\VisualStudio 2013\_NixSolutionsTasks\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\EntityFramework.xml
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.BusinessLogic.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.BusinessLogic.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Contracts.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Core.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Data.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.BusinessLogic\bin\Debug\EntityFramework.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Contracts.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Core.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Data.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.BusinessLogic\bin\Debug\EntityFramework.xml
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.BusinessLogic\obj\Debug\Pharmacy.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.BusinessLogic\obj\Debug\Pharmacy.BusinessLogic.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.BusinessLogic\obj\Debug\Pharmacy.BusinessLogic.pdb
