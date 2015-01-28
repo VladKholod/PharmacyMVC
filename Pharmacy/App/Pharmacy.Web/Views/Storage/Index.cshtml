@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Pharmacy.Web.Core.Models.Storages.StorageViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Storages</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new{}, new{ @class = "btn btn-success"})
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PharmacyNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicamentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PharmacyNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicamentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { pharmacyId = item.PharmacyId, medicamentId = item.MedicamentId }, new { @class = " btn btn-default" }) 
+            @Html.ActionLink("Details", "Details", new { pharmacyId = item.PharmacyId, medicamentId = item.MedicamentId }, new { @class = " btn btn-default" }) 
+            @Ajax.ActionLink("Delete", "Delete", new { pharmacyId = item.PharmacyId, medicamentId = item.MedicamentId }, new AjaxOptions(){HttpMethod = "GET"}, new { @class = "btn btn-danger"})
+        </td>
+    </tr>
+}
+
+</table>
