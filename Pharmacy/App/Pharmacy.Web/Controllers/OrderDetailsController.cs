@@ -51,6 +51,7 @@ namespace Pharmacy.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(CreateOrderDetailsViewModel createOrderDetailsVM)
         {
             if (!ModelState.IsValid)
@@ -78,6 +79,7 @@ namespace Pharmacy.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(int orderId,int medicamentId, EditOrderDetailsViewModel editOrderDetailsVM)
         {
             if (!ModelState.IsValid)

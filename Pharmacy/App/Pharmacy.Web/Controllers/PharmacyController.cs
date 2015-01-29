@@ -42,6 +42,7 @@ namespace Pharmacy.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(PharmacyViewModel pharmacyVM)
         {
             if (!ModelState.IsValid)
@@ -66,6 +67,7 @@ namespace Pharmacy.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, PharmacyViewModel pharmacyVM)
         {
             if (!ModelState.IsValid)
@@ -73,14 +75,9 @@ namespace Pharmacy.Web.Controllers
                 return View(pharmacyVM);
             }
 
-            var tempPharmacy = Mapper.Map<PharmacyViewModel, Pharmacy.Core.Pharmacy>(pharmacyVM);
+            var pharmacy = _manager.GetByPrimaryKey(id);
+            pharmacy = Mapper.Map(pharmacyVM,pharmacy);
             
-            var pharmacy = _manager.GetByPrimaryKey(tempPharmacy.Id);
-            pharmacy.Number = tempPharmacy.Number;
-            pharmacy.OpenDate = tempPharmacy.OpenDate;
-            pharmacy.Phone = tempPharmacy.Phone;
-            pharmacy.Address = tempPharmacy.Address;
-
             _manager.Update(pharmacy);
 
             return RedirectToAction("Index");

@@ -44,7 +44,10 @@
         </dd>
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { orderId = Model.OrderId, medicamentId = Model.MedicamentId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+<div class="container" style="margin: 20px 0 0; float: right;">
+    @Html.ActionLink("Edit", "Edit", new { orderId = Model.OrderId, medicamentId = Model.MedicamentId },
+        new { @class = "btn btn-success" })
+
+    @Html.ActionLink("Back to List", "Index", new { }, new { @class = "btn btn-success" })
+</div>

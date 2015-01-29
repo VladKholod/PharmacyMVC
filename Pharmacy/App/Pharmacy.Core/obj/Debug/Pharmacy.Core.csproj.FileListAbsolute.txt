@@ -20,3 +20,9 @@ D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy
 D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.Core\obj\Debug\Pharmacy.Core.csprojResolveAssemblyReference.cache
 D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.Core\obj\Debug\Pharmacy.Core.dll
 D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.Core\obj\Debug\Pharmacy.Core.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Core\bin\Debug\Pharmacy.Core.dll.config
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Core\bin\Debug\Pharmacy.Core.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Core\bin\Debug\Pharmacy.Core.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Core\obj\Debug\Pharmacy.Core.csprojResolveAssemblyReference.cache
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Core\obj\Debug\Pharmacy.Core.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Core\obj\Debug\Pharmacy.Core.pdb

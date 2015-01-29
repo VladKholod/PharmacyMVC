@@ -49,6 +49,7 @@ namespace Pharmacy.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(CreateStorageViewModel createStorageVM)
         {
             if (!ModelState.IsValid)
@@ -76,6 +77,7 @@ namespace Pharmacy.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(int pharmacyId, int medicamentId, EditStorageViewModel editStorageVM)
         {
             if (!ModelState.IsValid)

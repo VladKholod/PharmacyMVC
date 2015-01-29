@@ -5,60 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/gridmvc")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
 <section id="container">
-    <header>
-        <a href="#" class="logo">Pharmacy<span>MVC</span></a>
+    <header class="header white-bg">
+        <a href="@Url.Action("Index","Home")" class="logo"><span>P</span>h<span>arma</span>c<span>y</span></a>
+
+        <div class="nav notify-row">
+            
+        </div>
     </header>
 
-    <aside>
-        <div id="sidebar" class="nav-collapse ">
-            <div class="text-center text-danger" style="margin: 20px 0 -60px">
-                Pharmacy MVC
+        <aside>
+            <div id="sidebar" class="nav-collapse">
+                <ul class="sidebar-menu">
+                    <li id="home">
+                        <a class="" href="@Url.Action("Index", "Home")">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li id="pharmacy">
+                        <a class="" href="@Url.Action("Index", "Pharmacy")">
+                            <span>Pharmacies</span>
+                        </a>
+                    </li>
+                    <li id="medicament">
+                        <a class="" href="@Url.Action("Index", "Medicament")">
+                            <span>Medicaments</span>
+                        </a>
+                    </li>
+                    <li id="storage">
+                        <a class="" href="@Url.Action("Index", "Storage")">
+                            <span>Storages</span>
+                        </a>
+                    </li>
+                    <li id="order">
+                        <a class="" href="@Url.Action("Index", "Order")">
+                            <span>Orders</span>
+                        </a>
+                    </li>
+                    <li id="orderDetails">
+                        <a class="" href="@Url.Action("Index", "OrderDetails")">
+                            <span>OrderDetails</span>
+                        </a>
+                    </li>
+                    <li id="medicamentPriceHistory">
+                        <a class="" href="@Url.Action("Index", "MedicamentPriceHistory")">
+                            <span>MedicamentPriceHistory</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <!-- sidebar menu start-->
-            <ul class="sidebar-menu">
-                <li class="active">
-                    <a class="" href="@Url.Action("Index", "Home")">
-                        <span>Home</span>
-                    </a>
-                </li>
-                <li class="active">
-                    <a class="" href="@Url.Action("Index", "Pharmacy")">
-                        <span>Pharmacies</span>
-                    </a>
-                </li>
-                <li class="active">
-                    <a class="" href="@Url.Action("Index", "Medicament")">
-                        <span>Medicaments</span>
-                    </a>
-                </li>
-                <li class="active">
-                    <a class="" href="@Url.Action("Index", "Storage")">
-                        <span>Storages</span>
-                    </a>
-                </li>
-                <li class="active">
-                    <a class="" href="@Url.Action("Index", "Order")">
-                        <span>Orders</span>
-                    </a>
-                </li>
-                <li class="active">
-                    <a class="" href="@Url.Action("Index", "OrderDetails")">
-                        <span>OrderDetails</span>
-                    </a>
-                </li>
-                <li class="active">
-                    <a class="" href="@Url.Action("Index", "MedicamentPriceHistory")">
-                        <span>MedicamentPriceHistory</span>
-                    </a>
-                </li>
-            </ul>
-            <!-- sidebar menu end-->
-        </div>
-    </aside>
+        </aside>
 </section>
 
 <section id="main-content">
@@ -69,7 +69,7 @@
         </div>
     </section>
     
-    <footer class="footer navbar-right" style="position: absolute; right: 0; bottom: 0;">
+    <footer class="footer navbar-right" style="float: right; ">
         <p class="text-danger">&copy; @DateTime.Now.Year - Pharmace ASP.Net MVC</p>
     </footer>
 
@@ -80,6 +80,7 @@
 
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/gridmvc")
 @RenderSection("scripts", required: false)
 
 </body>

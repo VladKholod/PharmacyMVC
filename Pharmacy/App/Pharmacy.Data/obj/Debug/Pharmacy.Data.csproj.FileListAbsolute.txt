@@ -42,3 +42,17 @@ D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy
 D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.Data\obj\Debug\Pharmacy.Data.csprojResolveAssemblyReference.cache
 D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.Data\obj\Debug\Pharmacy.Data.dll
 D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.Data\obj\Debug\Pharmacy.Data.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Data\bin\Debug\Pharmacy.Data.dll.config
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Data\bin\Debug\Pharmacy.Data.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Data\bin\Debug\Pharmacy.Data.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Data\bin\Debug\EntityFramework.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Data\bin\Debug\Pharmacy.Contracts.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Data\bin\Debug\Pharmacy.Core.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Data\bin\Debug\Pharmacy.Contracts.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Data\bin\Debug\Pharmacy.Core.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Data\bin\Debug\EntityFramework.xml
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Data\obj\Debug\Pharmacy.Data.csprojResolveAssemblyReference.cache
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Data\obj\Debug\Pharmacy.Data.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Data\obj\Debug\Pharmacy.Data.pdb

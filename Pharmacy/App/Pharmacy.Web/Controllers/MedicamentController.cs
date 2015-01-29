@@ -43,6 +43,7 @@ namespace Pharmacy.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(MedicamentViewModel medicamentVM)
         {
             if (!ModelState.IsValid)
@@ -66,6 +67,7 @@ namespace Pharmacy.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, MedicamentViewModel medicamentVM)
         {
             if (!ModelState.IsValid)
@@ -73,8 +75,8 @@ namespace Pharmacy.Web.Controllers
                 return View(medicamentVM);
             }
 
-            var medicament = Mapper.Map<MedicamentViewModel, Medicament>(medicamentVM);
-            
+            var medicament = _manager.GetByPrimaryKey(id);
+            medicament = Mapper.Map(medicamentVM, medicament);
 
             _manager.Update(medicament);
 

@@ -15,3 +15,10 @@ D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy
 D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.Contracts\obj\Debug\Pharmacy.Contracts.csprojResolveAssemblyReference.cache
 D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.Contracts\bin\Debug\Pharmacy.Core.dll
 D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.Contracts\bin\Debug\Pharmacy.Core.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Contracts\bin\Debug\Pharmacy.Contracts.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Contracts\bin\Debug\Pharmacy.Contracts.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Contracts\bin\Debug\Pharmacy.Core.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Contracts\bin\Debug\Pharmacy.Core.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Contracts\obj\Debug\Pharmacy.Contracts.csprojResolveAssemblyReference.cache
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Contracts\obj\Debug\Pharmacy.Contracts.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.Contracts\obj\Debug\Pharmacy.Contracts.pdb

@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Pharmacy.Web.Core.Models.MedicamentPriceHistories.MedicamentPriceHistoryViewModel>
+@using GridMvc.Html
 
 @{
     ViewBag.Title = "Index";
@@ -7,35 +8,33 @@
 
 <h2>Medicament Price History</h2>
 
-<table class="table table-bordered">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.MedicamentName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ModifiedDate)
-        </th>
-        <th></th>
-    </tr>
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add(m => m.MedicamentName)
+        .Titled("Medicament name");
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.MedicamentName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ModifiedDate)
-        </td>
-        <td>
-            @Ajax.ActionLink("Delete", "Delete", new { id = item.Id }, new AjaxOptions(){HttpMethod = "GET"}, new { @class = "btn btn-danger"})
-        </td>
-    </tr>
+    columns.Add(m => m.ModifiedDate)
+        .Titled("Modified date");
+
+    columns.Add(m => m.Price)
+        .Titled("Price");
+
+    columns.Add()
+        .Titled("")
+        .SetWidth(50)
+        .Sanitized(false)
+        .Encoded(false)
+        .@RenderValueAs(m =>
+            @<b>
+                @Ajax.ActionLink("Delete", "Delete", new { id = m.Id },
+                    new AjaxOptions() { HttpMethod = "GET" },
+                    new { @class = "btn btn-danger" })
+            </b>);
+
+}).WithPaging(5)
+
+@section scripts{
+    <script>
+        $("#medicamentPriceHistory").addClass("active");
+    </script>
 }
-
-</table>

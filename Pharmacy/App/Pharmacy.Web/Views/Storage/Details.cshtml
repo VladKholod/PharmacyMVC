@@ -9,7 +9,7 @@
 
 <div>
     <h4>StorageViewModel</h4>
-    <hr />
+    <hr/>
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.PharmacyNumber)
@@ -36,7 +36,9 @@
         </dd>
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { pharmacyId = Model.PharmacyId, medicamentId = Model.MedicamentId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+<div class="container" style="margin: 20px 0 0; float: right;">
+    @Html.ActionLink("Edit", "Edit", new { pharmacyId = Model.PharmacyId, medicamentId = Model.MedicamentId },
+        new { @class = "btn btn-success" })
+    @Html.ActionLink("Back to List", "Index", new { }, new { @class = "btn btn-success" })
+</div>

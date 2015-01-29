@@ -1,15 +1,14 @@
 ﻿@model Pharmacy.Web.Core.Models.Orders.OrderViewModel
+@using GridMvc.Html
 
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Order details</h2>
+<h2>Order @Model.Id</h2>
 
 <div>
-    <h4>OrderViewModel</h4>
-    <hr />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Date)
@@ -36,37 +35,25 @@
         </dd>
     </dl>
 
-    <table class="table table-bordered">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.OrderDetailses.First().Medicament.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OrderDetailses.First().Quantity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OrderDetailses.First().Price)
-            </th>
-        </tr>
+    @Html.Grid(Model.OrderDetailses).Columns(columns =>
+{
+    columns.Add(m => m.OrderId)
+        .Titled("Order id");
 
-        @foreach (var item in Model.OrderDetailses)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Medicament.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Quantity)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Price)
-                </td>
-            </tr>
-        }
-    </table>
+    columns.Add(m => m.Medicament.Name)
+        .Titled("Medicament name")
+        .SetWidth(150);
 
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
+    columns.Add(m => m.Price)
+        .Titled("Price");
+
+    columns.Add(m => m.Quantity)
+        .Titled("Quantity");
+
+}).WithPaging(5)
+</div>
+
+<div class="container" style="margin: 20px 0 0; float: right;">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-success" })
+    @Html.ActionLink("Back to List", "Index", new { }, new { @class = "btn btn-success" })
 </div>

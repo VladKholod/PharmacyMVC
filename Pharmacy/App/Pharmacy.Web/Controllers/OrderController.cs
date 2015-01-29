@@ -49,6 +49,7 @@ namespace Pharmacy.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(CreateOrderViewModel createOrderVM)
         {
             if (!ModelState.IsValid)
@@ -75,6 +76,7 @@ namespace Pharmacy.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, EditOrderViewModel editOrderVM)
         {
             if (!ModelState.IsValid)
@@ -82,12 +84,8 @@ namespace Pharmacy.Web.Controllers
                 return View(editOrderVM);
             }
 
-            var tempOrder = Mapper.Map<EditOrderViewModel, Order>(editOrderVM);
-
             var order = _manager.GetByPrimaryKey(id);
-            order.Date = tempOrder.Date;
-            order.PharmacyId = tempOrder.PharmacyId;
-            order.Type = tempOrder.Type;
+            order = Mapper.Map(editOrderVM,order);
 
             _manager.Update(order);
 

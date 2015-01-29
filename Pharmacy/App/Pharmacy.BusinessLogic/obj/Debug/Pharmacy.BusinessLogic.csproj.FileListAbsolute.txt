@@ -28,3 +28,16 @@ D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy
 D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.BusinessLogic\obj\Debug\Pharmacy.BusinessLogic.csprojResolveAssemblyReference.cache
 D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.BusinessLogic\obj\Debug\Pharmacy.BusinessLogic.dll
 D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy-master\App\Pharmacy.BusinessLogic\obj\Debug\Pharmacy.BusinessLogic.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.BusinessLogic.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.BusinessLogic.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Contracts.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Core.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Data.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\EntityFramework.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Contracts.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Core.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\Pharmacy.Data.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.BusinessLogic\bin\Debug\EntityFramework.xml
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.BusinessLogic\obj\Debug\Pharmacy.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.BusinessLogic\obj\Debug\Pharmacy.BusinessLogic.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.BusinessLogic\obj\Debug\Pharmacy.BusinessLogic.pdb

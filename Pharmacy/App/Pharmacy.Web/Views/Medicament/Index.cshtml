@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Pharmacy.Web.Core.Models.Medicaments.MedicamentViewModel>
+@using GridMvc.Html
 
 @{
     ViewBag.Title = "Index";
@@ -8,46 +9,45 @@
 <h2>Medicaments</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create", new { }, new { @class = "btn btn-success" })
+    @Html.ActionLink("Create New", "Create", new {}, new {@class = "btn btn-success"})
 </p>
-<table class="table table-bordered">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SerialNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th></th>
-    </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SerialNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = " btn btn-default" }) 
-                @Html.ActionLink("Details", "Details", new { id = item.Id }, new {@class = "btn btn-default"}) 
-                @Ajax.ActionLink("Delete", "Delete", new { id = item.Id }, new AjaxOptions() { HttpMethod = "GET" }, new { @class = "btn btn-danger" })
-            </td>
-        </tr>
-    }
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add(m => m.Name)
+        .Titled("Medicament name");
 
-</table>
+    columns.Add(m => m.Price)
+        .Titled("Price");
+    
+    columns.Add(m => m.Description)
+        .Titled("Description");
+
+    columns.Add(m => m.SerialNumber)
+        .Titled("Serial number");
+
+    columns.Add(m => m.Id)
+        .Titled("")
+        .SetWidth(225)
+        .Sanitized(false)
+        .Encoded(false)
+        .@RenderValueAs(m =>
+            @<b>
+                @Html.ActionLink("Edit", "Edit", new {id = m.Id},
+                    new {@class = " btn btn-default"})
+
+                @Html.ActionLink("Details", "Details", new {id = m.Id},
+                    new {@class = " btn btn-default"})
+
+                @Ajax.ActionLink("Delete", "Delete", new {id = m.Id},
+                    new AjaxOptions() {HttpMethod = "GET"},
+                    new {@class = " btn btn-danger"})
+            </b>);
+
+}).WithPaging(5)
+
+@section scripts{
+    <script>
+        $("#medicament").addClass("active");
+    </script>
+}
