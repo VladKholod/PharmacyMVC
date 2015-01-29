@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Pharmacy.Core;
-using Pharmacy.Web.Core.Models;
 using Pharmacy.Web.Core.Models.MedicamentPriceHistories;
 using Pharmacy.Web.Core.Models.Medicaments;
 using Pharmacy.Web.Core.Models.OrderDetailses;

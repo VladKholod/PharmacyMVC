@@ -19,11 +19,8 @@ namespace Pharmacy.App.Views
             : base(context)
         {
             _repository = new Repository<Storage>(Context);
-            var medicamentRepository = new Repository<Medicament>(Context);
-            var pharmacyRepository = new Repository<Core.Pharmacy>(Context);
 
-            _manager = new EntityManager<Storage>(_repository,
-                new StorageValidator(_repository, pharmacyRepository, medicamentRepository));
+            _manager = new EntityManager<Storage>(_repository, new StorageValidator(_repository));
         }
 
         #region CRUD

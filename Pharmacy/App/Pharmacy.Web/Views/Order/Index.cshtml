@@ -14,29 +14,29 @@
 
 @Html.Grid(Model).Columns(columns =>
 {
-    columns.Add(m => m.PharmacyNumber)
+    columns.Add(order => order.PharmacyNumber)
         .Titled("Pharmacy name");
 
-    columns.Add(m => m.Type)
+    columns.Add(order => order.Type)
         .Titled("Type");
 
-    columns.Add(m => m.Date)
+    columns.Add(order => order.Date)
         .Titled("Phone");
 
-    columns.Add(m => m.Id)
+    columns.Add(order => order.Id)
         .Titled("")
         .SetWidth(225)
         .Sanitized(false)
         .Encoded(false)
-        .@RenderValueAs(m =>
+        .@RenderValueAs(order =>
             @<b>
-                @Html.ActionLink("Edit", "Edit", new { id = m.Id },
+                @Html.ActionLink("Edit", "Edit", new { id = order.Id },
                     new { @class = " btn btn-default" })
 
-                @Html.ActionLink("Details", "Details", new { id = m.Id },
+                @Html.ActionLink("Details", "Details", new { id = order.Id },
                     new { @class = " btn btn-default" })
 
-                @Ajax.ActionLink("Delete", "Delete", new { id = m.Id },
+                @Ajax.ActionLink("Delete", "Delete", new { id = order.Id },
                     new AjaxOptions() { HttpMethod = "GET" },
                     new { @class = "btn btn-danger" })
             </b>);

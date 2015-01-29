@@ -14,32 +14,32 @@
 
 @Html.Grid(Model).Columns(columns =>
 {
-    columns.Add(m => m.Address)
+    columns.Add(pharmacy => pharmacy.Address)
         .Titled("Address");
 
-    columns.Add(m => m.Number)
+    columns.Add(pharmacy => pharmacy.Number)
         .Titled("Number");
 
-    columns.Add(m => m.Phone)
+    columns.Add(pharmacy => pharmacy.Phone)
         .Titled("Phone");
 
-    columns.Add(m => m.OpenDate)
+    columns.Add(pharmacy => pharmacy.OpenDate)
         .Titled("Open date");
 
-    columns.Add(m => m.Id)
+    columns.Add(pharmacy => pharmacy.Id)
         .Titled("")
         .SetWidth(225)
         .Sanitized(false)
         .Encoded(false)
-        .@RenderValueAs(m =>
+        .@RenderValueAs(pharmacy =>
             @<b>
-                @Html.ActionLink("Edit", "Edit", new { id = m.Id },
+                @Html.ActionLink("Edit", "Edit", new { id = pharmacy.Id },
                     new { @class = " btn btn-default" })
 
-                @Html.ActionLink("Details", "Details", new { id = m.Id },
+                @Html.ActionLink("Details", "Details", new { id = pharmacy.Id },
                     new { @class = " btn btn-default" })
 
-                @Ajax.ActionLink("Delete", "Delete", new { id = m.Id },
+                @Ajax.ActionLink("Delete", "Delete", new { id = pharmacy.Id },
                     new AjaxOptions() { HttpMethod = "GET" },
                     new { @class = "btn btn-danger" })
             </b>);

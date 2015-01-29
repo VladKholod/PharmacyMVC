@@ -7,16 +7,10 @@ namespace Pharmacy.BusinessLogic.Validators
     public class OrderDetailsValidator : IValidator<OrderDetails>
     {
         private readonly IRepository<OrderDetails> _orderDetailsRepository; 
-        private readonly IRepository<Order> _orderRepository;
-        private readonly IRepository<Medicament> _medicamentRepository;
 
-        public OrderDetailsValidator(IRepository<OrderDetails> orderDetailsRepository, 
-            IRepository<Order> orderRepository,
-            IRepository<Medicament> medicamentRepository)
+        public OrderDetailsValidator(IRepository<OrderDetails> orderDetailsRepository)
         {
             _orderDetailsRepository = orderDetailsRepository;
-            _orderRepository = orderRepository;
-            _medicamentRepository = medicamentRepository;
         }
 
         public bool IsValidEntity(OrderDetails entity)

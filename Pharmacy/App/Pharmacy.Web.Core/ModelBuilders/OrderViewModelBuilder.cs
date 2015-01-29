@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using Pharmacy.Contracts.Managers;
 using Pharmacy.Core;
-using Pharmacy.Web.Core.Models;
 using Pharmacy.Web.Core.Models.Orders;
 
 namespace Pharmacy.Web.Core.ModelBuilders

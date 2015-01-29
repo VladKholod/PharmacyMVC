@@ -4,7 +4,6 @@ using System.Web.Mvc;
 using AutoMapper;
 using Pharmacy.Contracts.Managers;
 using Pharmacy.Core;
-using Pharmacy.Web.Core.Models;
 using Pharmacy.Web.Core.Models.Medicaments;
 
 namespace Pharmacy.Web.Controllers
@@ -22,18 +21,18 @@ namespace Pharmacy.Web.Controllers
         public ActionResult Index()
         {
             var medicaments = _manager.GetAll();
-            var medicamentsVM = Mapper.Map<IQueryable<Medicament>, List<MedicamentViewModel>>(medicaments);
+            var medicamentViewModels = Mapper.Map<IQueryable<Medicament>, List<MedicamentViewModel>>(medicaments);
             
-            return View(medicamentsVM);
+            return View(medicamentViewModels);
         }
 
         [HttpGet]
         public ActionResult Details(int id)
         {
             var medicament = _manager.GetByPrimaryKey(id);
-            var medicamentVM = Mapper.Map<Medicament, MedicamentViewModel>(medicament);
+            var medicamentViewModel = Mapper.Map<Medicament, MedicamentViewModel>(medicament);
 
-            return View(medicamentVM);
+            return View(medicamentViewModel);
         }
 
         [HttpGet]
@@ -44,14 +43,14 @@ namespace Pharmacy.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(MedicamentViewModel medicamentVM)
+        public ActionResult Create(MedicamentViewModel medicamentViewModel)
         {
             if (!ModelState.IsValid)
             {
                 return View();
             }
 
-            var medicament = Mapper.Map<MedicamentViewModel, Medicament>(medicamentVM);
+            var medicament = Mapper.Map<MedicamentViewModel, Medicament>(medicamentViewModel);
             _manager.Add(medicament);
 
             return RedirectToAction("Index");
@@ -61,22 +60,22 @@ namespace Pharmacy.Web.Controllers
         public ActionResult Edit(int id)
         {
             var medicament = _manager.GetByPrimaryKey(id);
-            var medicamentVM = Mapper.Map<Medicament, MedicamentViewModel>(medicament);
+            var medicamentViewModel = Mapper.Map<Medicament, MedicamentViewModel>(medicament);
 
-            return View(medicamentVM);
+            return View(medicamentViewModel);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, MedicamentViewModel medicamentVM)
+        public ActionResult Edit(int id, MedicamentViewModel medicamentViewModel)
         {
             if (!ModelState.IsValid)
             {
-                return View(medicamentVM);
+                return View(medicamentViewModel);
             }
 
             var medicament = _manager.GetByPrimaryKey(id);
-            medicament = Mapper.Map(medicamentVM, medicament);
+            medicament = Mapper.Map(medicamentViewModel, medicament);
 
             _manager.Update(medicament);
 

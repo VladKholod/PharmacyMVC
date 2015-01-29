@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<Pharmacy.Web.Core.Models.Storages.StorageViewModel>
 @using GridMvc.Html
 
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -14,13 +15,13 @@
 
 @Html.Grid(Model).Columns(columns =>
 {
-    columns.Add(m => m.PharmacyNumber)
+    columns.Add(storage => storage.PharmacyNumber)
         .Titled("Pharmacy number");
 
-    columns.Add(m => m.MedicamentName)
+    columns.Add(storage => storage.MedicamentName)
         .Titled("Medicament name");
 
-    columns.Add(m => m.Quantity)
+    columns.Add(storage => storage.Quantity)
         .Titled("Quantity");
 
     columns.Add()
@@ -28,15 +29,15 @@
         .SetWidth(225)
         .Sanitized(false)
         .Encoded(false)
-        .@RenderValueAs(m =>
+        .@RenderValueAs(storage =>
             @<b>
-                @Html.ActionLink("Edit", "Edit", new { orderId = m.PharmacyId, medicamentId = m.MedicamentId },
+                @Html.ActionLink("Edit", "Edit", new { orderId = storage.PharmacyId, medicamentId = storage.MedicamentId },
                     new { @class = " btn btn-default" })
 
-                @Html.ActionLink("Details", "Details", new { orderId = m.PharmacyId, medicamentId = m.MedicamentId },
+                @Html.ActionLink("Details", "Details", new { orderId = storage.PharmacyId, medicamentId = storage.MedicamentId },
                     new { @class = " btn btn-default" })
 
-                @Ajax.ActionLink("Delete", "Delete", new { orderId = m.PharmacyId, medicamentId = m.MedicamentId },
+                @Ajax.ActionLink("Delete", "Delete", new { orderId = storage.PharmacyId, medicamentId = storage.MedicamentId },
                     new AjaxOptions() { HttpMethod = "GET" },
                     new { @class = "btn btn-danger" })
             </b>);

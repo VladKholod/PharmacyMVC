@@ -6,7 +6,6 @@ using AutoMapper;
 using Pharmacy.Contracts.Managers;
 using Pharmacy.Core;
 using Pharmacy.Web.Core.ModelBuilders;
-using Pharmacy.Web.Core.Models;
 using Pharmacy.Web.Core.Models.Orders;
 
 namespace Pharmacy.Web.Controllers
@@ -26,40 +25,40 @@ namespace Pharmacy.Web.Controllers
         public ActionResult Index()
         {
             var orders = _manager.GetAll();
-            var ordersVM = Mapper.Map<IQueryable<Order>, List<OrderViewModel>>(orders);
+            var orderViewModels = Mapper.Map<IQueryable<Order>, List<OrderViewModel>>(orders);
 
-            return View(ordersVM);
+            return View(orderViewModels);
         }
 
         [HttpGet]
         public ActionResult Details(int id)
         {
             var order = _manager.GetByPrimaryKey(id);
-            var orderVM = Mapper.Map<Order, OrderViewModel>(order);
+            var orderViewModel = Mapper.Map<Order, OrderViewModel>(order);
 
-            return View(orderVM);
+            return View(orderViewModel);
         }
 
         [HttpGet]
         public ActionResult Create()
         {
-            var createOrderVM = _builder.BuildCreateOrderViewModel();
+            var createOrderViewModel = _builder.BuildCreateOrderViewModel();
 
-            return View(createOrderVM);
+            return View(createOrderViewModel);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CreateOrderViewModel createOrderVM)
+        public ActionResult Create(CreateOrderViewModel createOrderViewModel)
         {
             if (!ModelState.IsValid)
             {
-                var tempCreateOrderVM = _builder.BuildCreateOrderViewModel();
-                createOrderVM.Pharmacies = tempCreateOrderVM.Pharmacies;
-                return View(createOrderVM);
+                var tempCreateOrderViewModel = _builder.BuildCreateOrderViewModel();
+                createOrderViewModel.Pharmacies = tempCreateOrderViewModel.Pharmacies;
+                return View(createOrderViewModel);
             }
 
-            var order = Mapper.Map<CreateOrderViewModel, Order>(createOrderVM);
+            var order = Mapper.Map<CreateOrderViewModel, Order>(createOrderViewModel);
             order.Date = DateTime.Now;
 
             _manager.Add(order);
@@ -70,22 +69,22 @@ namespace Pharmacy.Web.Controllers
         [HttpGet]
         public ActionResult Edit(int id)
         {
-            var editOrderVM = _builder.BuildEditOrderViewModel(id);
+            var editOrderViewModel = _builder.BuildEditOrderViewModel(id);
 
-            return View(editOrderVM);
+            return View(editOrderViewModel);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, EditOrderViewModel editOrderVM)
+        public ActionResult Edit(int id, EditOrderViewModel editOrderViewModel)
         {
             if (!ModelState.IsValid)
             {
-                return View(editOrderVM);
+                return View(editOrderViewModel);
             }
 
             var order = _manager.GetByPrimaryKey(id);
-            order = Mapper.Map(editOrderVM,order);
+            order = Mapper.Map(editOrderViewModel,order);
 
             _manager.Update(order);
 

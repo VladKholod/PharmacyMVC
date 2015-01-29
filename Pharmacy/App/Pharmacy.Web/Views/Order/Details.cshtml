@@ -37,17 +37,17 @@
 
     @Html.Grid(Model.OrderDetailses).Columns(columns =>
 {
-    columns.Add(m => m.OrderId)
+    columns.Add(order => order.OrderId)
         .Titled("Order id");
 
-    columns.Add(m => m.Medicament.Name)
+    columns.Add(order => order.Medicament.Name)
         .Titled("Medicament name")
         .SetWidth(150);
 
-    columns.Add(m => m.Price)
+    columns.Add(order => order.Price)
         .Titled("Price");
 
-    columns.Add(m => m.Quantity)
+    columns.Add(order => order.Quantity)
         .Titled("Quantity");
 
 }).WithPaging(5)

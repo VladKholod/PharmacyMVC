@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
 using Pharmacy.Contracts.Managers;
 using Pharmacy.Core;
-using Pharmacy.Web.Core.Models;
 using Pharmacy.Web.Core.Models.MedicamentPriceHistories;
 
 namespace Pharmacy.Web.Controllers
@@ -24,8 +21,8 @@ namespace Pharmacy.Web.Controllers
         public ActionResult Index()
         {
             var histories = _manager.GetAll();
-            var historiesVM = Mapper.Map<IQueryable<MedicamentPriceHistory>, List<MedicamentPriceHistoryViewModel>>(histories);
-            return View(historiesVM);
+            var historyViewModels = Mapper.Map<IQueryable<MedicamentPriceHistory>, List<MedicamentPriceHistoryViewModel>>(histories);
+            return View(historyViewModels);
         }
 
         [HttpGet]

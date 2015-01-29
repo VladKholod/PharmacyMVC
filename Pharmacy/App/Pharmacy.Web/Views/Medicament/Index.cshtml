@@ -14,32 +14,32 @@
 
 @Html.Grid(Model).Columns(columns =>
 {
-    columns.Add(m => m.Name)
+    columns.Add(medicament => medicament.Name)
         .Titled("Medicament name");
 
-    columns.Add(m => m.Price)
+    columns.Add(medicament => medicament.Price)
         .Titled("Price");
     
-    columns.Add(m => m.Description)
+    columns.Add(medicament => medicament.Description)
         .Titled("Description");
 
-    columns.Add(m => m.SerialNumber)
+    columns.Add(medicament => medicament.SerialNumber)
         .Titled("Serial number");
 
-    columns.Add(m => m.Id)
+    columns.Add(medicament => medicament.Id)
         .Titled("")
         .SetWidth(225)
         .Sanitized(false)
         .Encoded(false)
-        .@RenderValueAs(m =>
+        .@RenderValueAs(medicament =>
             @<b>
-                @Html.ActionLink("Edit", "Edit", new {id = m.Id},
+                @Html.ActionLink("Edit", "Edit", new {id = medicament.Id},
                     new {@class = " btn btn-default"})
 
-                @Html.ActionLink("Details", "Details", new {id = m.Id},
+                @Html.ActionLink("Details", "Details", new {id = medicament.Id},
                     new {@class = " btn btn-default"})
 
-                @Ajax.ActionLink("Delete", "Delete", new {id = m.Id},
+                @Ajax.ActionLink("Delete", "Delete", new {id = medicament.Id},
                     new AjaxOptions() {HttpMethod = "GET"},
                     new {@class = " btn btn-danger"})
             </b>);

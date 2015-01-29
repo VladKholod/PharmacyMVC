@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
 using Pharmacy.Contracts.Managers;
@@ -28,42 +26,42 @@ namespace Pharmacy.Web.Controllers
         public ActionResult Index()
         {
             var orderDetails = _manager.GetAll();
-            var orderDetailsVM = Mapper.Map<IQueryable<OrderDetails>, List<OrderDetailsViewModel>>(orderDetails);
+            var orderDetailsViewModels = Mapper.Map<IQueryable<OrderDetails>, List<OrderDetailsViewModel>>(orderDetails);
 
-            return View(orderDetailsVM);
+            return View(orderDetailsViewModels);
         }
 
         [HttpGet]
         public ActionResult Details(int orderId, int medicamentId)
         {
             var orderDetails = _manager.GetByPrimaryKey(orderId, medicamentId);
-            var orderDetailsVM = Mapper.Map<OrderDetails, OrderDetailsViewModel>(orderDetails);
+            var orderDetailsViewModel = Mapper.Map<OrderDetails, OrderDetailsViewModel>(orderDetails);
 
-            return View(orderDetailsVM);
+            return View(orderDetailsViewModel);
         }
 
         [HttpGet]
         public ActionResult Create()
         {
-            var createOrderDetailsVM = _builder.BuildCreateOrderDetailsViewModel();
+            var createOrderDetailsViewModel = _builder.BuildCreateOrderDetailsViewModel();
 
-            return View(createOrderDetailsVM);
+            return View(createOrderDetailsViewModel);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CreateOrderDetailsViewModel createOrderDetailsVM)
+        public ActionResult Create(CreateOrderDetailsViewModel createOrderDetailsViewModel)
         {
             if (!ModelState.IsValid)
             {
-                var tempCreateOrderDetailsVM = _builder.BuildCreateOrderDetailsViewModel();
-                createOrderDetailsVM.Orders = tempCreateOrderDetailsVM.Orders;
-                createOrderDetailsVM.Medicaments = tempCreateOrderDetailsVM.Medicaments;
+                var tempCreateOrderDetailsViewModel = _builder.BuildCreateOrderDetailsViewModel();
+                createOrderDetailsViewModel.Orders = tempCreateOrderDetailsViewModel.Orders;
+                createOrderDetailsViewModel.Medicaments = tempCreateOrderDetailsViewModel.Medicaments;
 
-                return View(createOrderDetailsVM);
+                return View(createOrderDetailsViewModel);
             }
 
-            var orderDetails = Mapper.Map<CreateOrderDetailsViewModel, OrderDetails>(createOrderDetailsVM);
+            var orderDetails = Mapper.Map<CreateOrderDetailsViewModel, OrderDetails>(createOrderDetailsViewModel);
             _manager.Add(orderDetails);
 
             return RedirectToAction("Index");
@@ -73,23 +71,23 @@ namespace Pharmacy.Web.Controllers
         public ActionResult Edit(int orderId, int medicamentId)
         {
             var orderDetails = _manager.GetByPrimaryKey(orderId, medicamentId);
-            var editOrderDetailsVM = Mapper.Map<OrderDetails, EditOrderDetailsViewModel>(orderDetails);
+            var editOrderDetailsViewModel = Mapper.Map<OrderDetails, EditOrderDetailsViewModel>(orderDetails);
 
-            return View(editOrderDetailsVM);
+            return View(editOrderDetailsViewModel);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int orderId,int medicamentId, EditOrderDetailsViewModel editOrderDetailsVM)
+        public ActionResult Edit(int orderId,int medicamentId, EditOrderDetailsViewModel editOrderDetailsViewModel)
         {
             if (!ModelState.IsValid)
             {
-                return View(editOrderDetailsVM);
+                return View(editOrderDetailsViewModel);
             }
             
             var orderDetails = _manager.GetByPrimaryKey(orderId, medicamentId);
-            orderDetails.Price = editOrderDetailsVM.Price;
-            orderDetails.Quantity = editOrderDetailsVM.Quantity;
+            orderDetails.Price = editOrderDetailsViewModel.Price;
+            orderDetails.Quantity = editOrderDetailsViewModel.Quantity;
 
             _manager.Update(orderDetails);
             
@@ -110,7 +108,7 @@ namespace Pharmacy.Web.Controllers
             var medicament = _medicamentManager.GetByPrimaryKey(medicamentId);
             return Json(new
             {
-                Price = medicament.Price
+                medicament.Price
             }, JsonRequestBehavior.AllowGet);
         }
     }

@@ -215,7 +215,6 @@
     <Content Include="Content\font-awesome\fonts\fontawesome-webfontf77b.eot" />
     <Content Include="Content\font-awesome\fonts\fontawesome-webfontf77b.ttf" />
     <Content Include="Content\font-awesome\fonts\fontawesome-webfontf77b.woff" />
-    <Content Include="Grid.mvc.readme" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap-switch.js" />
     <Content Include="Scripts\bootstrap.js" />

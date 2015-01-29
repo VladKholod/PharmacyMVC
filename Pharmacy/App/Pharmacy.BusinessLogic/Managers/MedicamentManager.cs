@@ -7,7 +7,7 @@ using Pharmacy.Core;
 
 namespace Pharmacy.BusinessLogic.Managers
 {
-    public class MedicamentManager: IMedicamentManager
+    public class MedicamentManager: IEntityManager<Medicament>, IMedicamentManager
     {
 
         private readonly IRepository<Medicament> _medicamentRepository; 

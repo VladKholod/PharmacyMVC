@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using Pharmacy.Web.Core.Models;
 using Pharmacy.Web.Core.Models.Medicaments;
 
 namespace Pharmacy.Web.Core.Validators

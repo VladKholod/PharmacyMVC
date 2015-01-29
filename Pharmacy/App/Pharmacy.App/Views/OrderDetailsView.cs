@@ -21,15 +21,10 @@ namespace Pharmacy.App.Views
         {
             _repository = new Repository<OrderDetails>(Context);
             
-            var medicamentRepository = new Repository<Medicament>(Context);
-            var orderRepository = new Repository<Order>(Context);
-            _orderDetailsManager = new EntityManager<OrderDetails>(_repository,
-                new OrderDetailsValidator(_repository, orderRepository, medicamentRepository));
+            _orderDetailsManager = new EntityManager<OrderDetails>(_repository, new OrderDetailsValidator(_repository));
 
             var storageRepository = new Repository<Storage>(Context);
-            var pharmacyRepository = new Repository<Core.Pharmacy>(Context);
-            _storageManager = new EntityManager<Storage>(storageRepository,
-                new StorageValidator(storageRepository, pharmacyRepository, medicamentRepository));
+            _storageManager = new EntityManager<Storage>(storageRepository, new StorageValidator(storageRepository));
         }
 
         #region CRUD

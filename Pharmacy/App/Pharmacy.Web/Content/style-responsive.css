@@ -34,7 +34,7 @@
     /* body container */
     #main-content {
         margin: 0px!important;
-        position: none !important;
+        position: !important;
     }
 
     #sidebar > ul > li > a > span {

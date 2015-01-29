@@ -10,13 +10,13 @@
 
 @Html.Grid(Model).Columns(columns =>
 {
-    columns.Add(m => m.MedicamentName)
+    columns.Add(medicamentPriceHistory => medicamentPriceHistory.MedicamentName)
         .Titled("Medicament name");
 
-    columns.Add(m => m.ModifiedDate)
+    columns.Add(medicamentPriceHistory => medicamentPriceHistory.ModifiedDate)
         .Titled("Modified date");
 
-    columns.Add(m => m.Price)
+    columns.Add(medicamentPriceHistory => medicamentPriceHistory.Price)
         .Titled("Price");
 
     columns.Add()
@@ -24,9 +24,9 @@
         .SetWidth(50)
         .Sanitized(false)
         .Encoded(false)
-        .@RenderValueAs(m =>
+        .@RenderValueAs(medicamentPriceHistory=>
             @<b>
-                @Ajax.ActionLink("Delete", "Delete", new { id = m.Id },
+                @Ajax.ActionLink("Delete", "Delete", new { id = medicamentPriceHistory.Id },
                     new AjaxOptions() { HttpMethod = "GET" },
                     new { @class = "btn btn-danger" })
             </b>);

@@ -7,16 +7,10 @@ namespace Pharmacy.BusinessLogic.Validators
     public class StorageValidator : IValidator<Storage>
     {
         private readonly IRepository<Storage> _storageRepository;
-        private readonly IRepository<Core.Pharmacy> _pharmacyRepository;
-        private readonly IRepository<Medicament> _medicamentRepository;
 
-        public StorageValidator(IRepository<Storage> storageRepository,
-            IRepository<Core.Pharmacy> pharmacyRepository, 
-            IRepository<Medicament> medicamentRepository)
+        public StorageValidator(IRepository<Storage> storageRepository)
         {
             _storageRepository = storageRepository;
-            _pharmacyRepository = pharmacyRepository;
-            _medicamentRepository = medicamentRepository;
         }
 
         public bool IsValidEntity(Storage entity)

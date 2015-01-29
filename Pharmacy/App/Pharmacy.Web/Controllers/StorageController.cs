@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
 using Pharmacy.Contracts.Managers;
@@ -26,42 +24,42 @@ namespace Pharmacy.Web.Controllers
         public ActionResult Index()
         {
             var storages = _manager.GetAll();
-            var storagesVM = Mapper.Map<IQueryable<Storage>, List<StorageViewModel>>(storages);
+            var storageViewModels = Mapper.Map<IQueryable<Storage>, List<StorageViewModel>>(storages);
 
-            return View(storagesVM);
+            return View(storageViewModels);
         }
 
         [HttpGet]
         public ActionResult Details(int pharmacyId, int medicamentId)
         {
             var storage = _manager.GetByPrimaryKey(pharmacyId, medicamentId);
-            var storageVM = Mapper.Map<Storage, StorageViewModel>(storage);
+            var storageViewModel = Mapper.Map<Storage, StorageViewModel>(storage);
 
-            return View(storageVM);
+            return View(storageViewModel);
         }
 
         [HttpGet]
         public ActionResult Create()
         {
-            var createStorageVM = _builder.BuildCreateStorageViewModel();
+            var createStorageViewModel = _builder.BuildCreateStorageViewModel();
             
-            return View(createStorageVM);
+            return View(createStorageViewModel);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CreateStorageViewModel createStorageVM)
+        public ActionResult Create(CreateStorageViewModel createStorageViewModel)
         {
             if (!ModelState.IsValid)
             {
-                var tempCreateStorageVM = _builder.BuildCreateStorageViewModel();
-                createStorageVM.Pharmacies = tempCreateStorageVM.Pharmacies;
-                createStorageVM.Medicaments = tempCreateStorageVM.Medicaments;
+                var tempCreateStorageViewModel = _builder.BuildCreateStorageViewModel();
+                createStorageViewModel.Pharmacies = tempCreateStorageViewModel.Pharmacies;
+                createStorageViewModel.Medicaments = tempCreateStorageViewModel.Medicaments;
 
-                return View(createStorageVM);
+                return View(createStorageViewModel);
             }
 
-            var storage = Mapper.Map<CreateStorageViewModel, Storage>(createStorageVM);
+            var storage = Mapper.Map<CreateStorageViewModel, Storage>(createStorageViewModel);
             _manager.Add(storage);
 
             return RedirectToAction("Index");
@@ -71,22 +69,22 @@ namespace Pharmacy.Web.Controllers
         public ActionResult Edit(int pharmacyId, int medicamentId)
         {
             var storage = _manager.GetByPrimaryKey(pharmacyId, medicamentId);
-            var editStorageVM = Mapper.Map<Storage, EditStorageViewModel>(storage);
+            var editStorageViewModel = Mapper.Map<Storage, EditStorageViewModel>(storage);
 
-            return View(editStorageVM);
+            return View(editStorageViewModel);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int pharmacyId, int medicamentId, EditStorageViewModel editStorageVM)
+        public ActionResult Edit(int pharmacyId, int medicamentId, EditStorageViewModel editStorageViewModel)
         {
             if (!ModelState.IsValid)
             {
-                return View(editStorageVM);
+                return View(editStorageViewModel);
             }
 
             var storage = _manager.GetByPrimaryKey(pharmacyId, medicamentId);
-            storage.Quantity = editStorageVM.Quantity;
+            storage.Quantity = editStorageViewModel.Quantity;
 
             _manager.Update(storage);
 
