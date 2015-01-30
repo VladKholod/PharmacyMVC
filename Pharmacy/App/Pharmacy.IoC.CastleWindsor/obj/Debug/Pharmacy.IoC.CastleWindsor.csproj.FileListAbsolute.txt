@@ -88,3 +88,7 @@ D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.IoC.Ca
 D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.IoC.CastleWindsor\obj\Debug\Pharmacy.IoC.CastleWindsor.csprojResolveAssemblyReference.cache
 D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.IoC.CastleWindsor\obj\Debug\Pharmacy.IoC.CastleWindsor.dll
 D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.IoC.CastleWindsor\obj\Debug\Pharmacy.IoC.CastleWindsor.pdb
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.IoC.CastleWindsor\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.IoC.CastleWindsor\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.IoC.CastleWindsor\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Workbench\Visual Studio 2013\_Tasks\MainPharmacy\Pharmacy\App\Pharmacy.IoC.CastleWindsor\bin\Debug\Microsoft.AspNet.Identity.Core.xml

@@ -9,6 +9,7 @@ using Pharmacy.Web.Core.Models.Storages;
 
 namespace Pharmacy.Web.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class StorageController : Controller
     {
         private readonly IEntityManager<Storage> _manager;

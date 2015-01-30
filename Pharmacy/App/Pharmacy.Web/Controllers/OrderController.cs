@@ -10,6 +10,7 @@ using Pharmacy.Web.Core.Models.Orders;
 
 namespace Pharmacy.Web.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class OrderController : Controller
     {
         private readonly IEntityManager<Order> _manager;

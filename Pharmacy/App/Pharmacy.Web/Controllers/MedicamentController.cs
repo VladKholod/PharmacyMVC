@@ -8,6 +8,7 @@ using Pharmacy.Web.Core.Models.Medicaments;
 
 namespace Pharmacy.Web.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class MedicamentController : Controller
     {
         private readonly IMedicamentManager _manager;

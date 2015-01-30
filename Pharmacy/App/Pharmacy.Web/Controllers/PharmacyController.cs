@@ -7,6 +7,7 @@ using Pharmacy.Web.Core.Models.Pharmacies;
 
 namespace Pharmacy.Web.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class PharmacyController : Controller
     {
         private readonly IEntityManager<Pharmacy.Core.Pharmacy> _manager; 

@@ -8,6 +8,7 @@ using Pharmacy.Web.Core.Models.MedicamentPriceHistories;
 
 namespace Pharmacy.Web.Controllers
 {
+    [Authorize]
     public class MedicamentPriceHistoryController : Controller
     {
         private readonly IEntityManager<MedicamentPriceHistory> _manager;
@@ -26,6 +27,7 @@ namespace Pharmacy.Web.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int id)
         {
             _manager.Remove(id);
