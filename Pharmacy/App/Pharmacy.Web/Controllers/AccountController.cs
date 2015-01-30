@@ -88,11 +88,7 @@ namespace Pharmacy.Web.Controllers
                 }
                 else
                 {
-                    foreach (var error in result.Errors)
-                    {
-                        if(!error.Contains("Email"))
-                        ModelState.AddModelError("", error);
-                    }
+                    AddErrors(result);
                 }
             }
 
